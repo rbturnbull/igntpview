@@ -5,6 +5,9 @@ import re
 def strip_namespace(el):
     if hasattr(el, "tag") and isinstance(el.tag, str) and "}" in el.tag:
         el.tag = el.tag.split("}", 1)[1]  # strip all namespaces
+    # import pdb; pdb.set_trace()
+    # if hasattr(el, "attrib"):
+    #     el.attrib = {key.split("}", 1)[1] if "}" in key else key:value for key, value in el.attrib.items()}
     for x in el:
         strip_namespace(x)
 

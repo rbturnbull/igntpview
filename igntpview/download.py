@@ -66,12 +66,8 @@ def read_cached_xml(url: str, filename: str, directory:Path=None, force:bool = F
     strip_namespace(tree)
     return tree
 
-def download_compaul():
-    
-    url = "https://itseeweb.cal.bham.ac.uk/epistulae/XML/NTstart.xsl"
-    # print(read_cached_download(url, "NTstart.xml"))
-
-    tree = read_cached_xml("https://itseeweb.cal.bham.ac.uk/epistulae/XML/compaul-start.xsl", "compaul-start.xsl")
+def download_listing(url, name):
+    tree = read_cached_xml(url, name)
     for option in tree.findall(".//option[@value]"):
         value = option.attrib['value']
         m = re.match(r".*\.xml$", value)
@@ -83,3 +79,9 @@ def download_compaul():
                 cached_download( url, m.group(0))
             except Exception as err:
                 print(f"Cannot download {url}: {err}")
+
+def download_latin():
+    download_listing("https://itseeweb.cal.bham.ac.uk/epistulae/XML/compaul-start.xsl", "compaul-start.xsl")
+
+def download_greek():
+    download_listing("https://itseeweb.cal.bham.ac.uk/epistulae/XML/NTstart.xsl", "NTstart.xsl")
