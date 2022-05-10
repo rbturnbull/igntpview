@@ -27,7 +27,7 @@ Enter the virtual environment with::
 
 Then use the program with::
 
-    igntpview B06K8V17 --directory /path/to/xml/directory
+    igntpview list B06K8V17 --directory /path/to/xml/directory
 
 Here B06K8V17 is the verse ID for Romans 8:17. I will make this more user-friendly if needed.
 
