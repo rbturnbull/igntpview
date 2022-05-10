@@ -31,4 +31,10 @@ Then use the program with::
 
 Here B06K8V17 is the verse ID for Romans 8:17. I will make this more user-friendly if needed.
 
+Example
+=======
 
+.. image:: docs/igntpview-example.png
+  :alt: igntpview example
+
+The blue text is original and text for correctors is in red.
