@@ -11,7 +11,8 @@ python = ">=3.8,<3.10"
 typer = "^0.4.1"
 appdirs = "^1.4.4"
 rich = "^12.4.1"
-dcodex-bible = {git = "https://github.com/rbturnbull/dcodex_bible.git"}
+lxml = "^4.8.0"
+beautifulsoup4 = "^4.11.1"
 
 [tool.poetry.dev-dependencies]
 
